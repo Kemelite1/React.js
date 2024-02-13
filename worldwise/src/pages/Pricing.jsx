@@ -2,7 +2,8 @@ import PageNav from "../components/PageNav";
 
 function Pricing() {
   return (
-    <div> <PageNav />
+    <div> 
+      <PageNav />
 
     <h1>Pricing</h1>
 
