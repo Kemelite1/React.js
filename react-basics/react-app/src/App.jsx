@@ -1,10 +1,10 @@
-import Card from './Card';
-import './index.css';
+
+import Button from './Button'
 
 function App() {
   return (
     <div>
-      <Card  />
+      <Button />
     </div>
     
   );
