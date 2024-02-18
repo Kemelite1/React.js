@@ -1,10 +1,11 @@
-
-import Button from './Button'
+import Traveler from './Traveler';
 
 function App() {
   return (
     <div>
-      <Button />
+      <Traveler name="Becky Kelvin" age={25} isTravelling={true} />
+      <Traveler name="Bovi Oke" age={30} isTravelling={false} />
+
     </div>
     
   );
