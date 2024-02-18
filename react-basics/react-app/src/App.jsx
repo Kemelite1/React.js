@@ -1,12 +1,9 @@
-import Traveler from './Traveler';
+import Greeting from './Greeting';
 
 function App() {
   return (
     <div>
-      <Traveler name="Becky Kelvin" age={25} isTravelling={true} />
-      <Traveler name="Bovi Oke" age={30} isTravelling={false} />
-      <Traveler />
-      <Traveler name="Dozie Boniiface" />
+      <Greeting isLoggedIn={true} username="Bovi" />
     </div>
     
   );
