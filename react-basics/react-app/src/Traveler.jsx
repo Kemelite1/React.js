@@ -15,4 +15,10 @@ Traveler.propTypes = {
     isTravelling: PropTypes.bool,
 }
 
+Traveler.defaultProps = {
+    name: "New Traveler",
+    age: 0,
+    isTravelling: false,
+}
+
 export default Traveler;
