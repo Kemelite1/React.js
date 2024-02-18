@@ -1,13 +1,10 @@
-import Header from './Header';
-import Footer from './Footer';
-import States from './States';
+import Card from './Card';
+import './index.css';
 
 function App() {
   return (
     <div>
-    <Header /> 
-    <States />
-    <Footer />
+      <Card  />
     </div>
     
   );
