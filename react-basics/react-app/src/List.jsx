@@ -1,12 +1,12 @@
 
 function List() {
   const states = [{name: 'Lagos', capital: 'Ikeja'},
-   {name: 'Imo', capital: 'Owerri'},
-    {name: 'Bayelsa', capital: 'Yenagoa'},
-     {name: 'Rivers', capital: 'Port Harcourt'},
-      {name: 'Cross River', capital: 'Calabar'}];
+   {id: 1, name: 'Imo', capital: 'Owerri'},
+    {id: 2, name: 'Bayelsa', capital: 'Yenagoa'},
+     {id: 3, name: 'Rivers', capital: 'Port Harcourt'},
+      {id: 4, name: 'Cross River', capital: 'Calabar'}];
 
-  const items = states.map(state => <li key={state.name}> {state.name}</li>)
+  const items = states.map(state => <li key={state.id}> {state.name}: &nbsp; <b>{state.capital}</b></li>)
   return (
     <ul>
     {items}
