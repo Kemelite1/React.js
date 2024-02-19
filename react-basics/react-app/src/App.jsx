@@ -1,11 +1,10 @@
-import Greeting from './Greeting';
+import List from './List';
 
 function App() {
   return (
     <div>
-      <Greeting isLoggedIn={true} username="Bovi" />
+      <List />
     </div>
-    
   );
 }
 export default App;
