@@ -1,10 +1,23 @@
-.traveler{
+.counter{
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    padding: 10px;
-    border: 1px solid #333333;
 }
 
-.traveler p{
-    margin: 0;
+.counter-display{
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.btn{
+    background-color: greenyellow;
+    color: white;
+    width: 140px;
+    height: 50px;
+    margin: 0px 5px;
+    font-size: 1em;
+    font-weight: bold;
+    border: navajowhite;
+    border-radius: 10px;
+    cursor: pointer;
 }
