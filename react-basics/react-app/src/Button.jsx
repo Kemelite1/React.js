@@ -9,9 +9,10 @@ function Button(){
         textAlign: "center"
     
     }
+    const handleClick = () => console.log('Hello');
 
     return (
-        <h1 style={styles}>Subscribe</h1>
+        <h1 onClick={handleClick} style={styles}>Subscribe</h1>
     );
 }
 export default Button;
