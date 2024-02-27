@@ -1,23 +1,73 @@
-.counter{
-    text-align: center;
+body{
+    background-color: #333;
+}
+.todo{
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
 }
-
-.counter-display{
-    font-size: 5em;
-    margin-top: 0;
-    margin-bottom: 40px;
+h1{
+    color: #fff;
+    font-size: 4rem;
 }
-
-.btn{
-    background-color: greenyellow;
-    color: white;
-    width: 140px;
-    height: 50px;
-    margin: 0px 5px;
-    font-size: 1em;
-    font-weight: bold;
-    border: navajowhite;
-    border-radius: 10px;
+button{
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+.add-btn{
+    background-color: greenyellow;
+    font-size: 1.7rem;
+}
+.add-btn:hover{
+    background-color: blueviolet;
+}
+
+.delete-btn{
+    background-color: red;
+}
+.delete-btn:hover{
+    background-color: yellowgreen;
+}
+
+.move-btn{
+    background-color: orange;
+}
+.move-btn:hover{
+    background-color: goldenrod;
+}
+
+input[type='text']{
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 2px solid rgb(208, 202, 202);
+    border-radius: 5px;
+    color: gray;
+}
+
+ol{
+    padding: 0;
+}
+
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    background-color: aquamarine;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.text{
+    flex: 1;
+}
+
+.delete-btn, .move-btn{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
 }
