@@ -37,6 +37,13 @@ const store = createStore(reducer);
 // console.log(store.getState());
 
 //Action creators
+//older way
+export const ACCOUNT_DEPOSIT = "account/deposit";
+function deposit(amount){
+    return { type: ACCOUNT_DEPOSIT, payload: amount};
+}
+
+//modern way
 function deposit(amount){
     return { type: "account/deposit", payload: amount}
 }
