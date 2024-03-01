@@ -1,12 +1,19 @@
-import {createStore} from 'redux';
+import {combineReducers, createStore} from 'redux';
 
-const initialState = {
+const initialStateAccount = {
     balance: 0,
     loan: 0,
     loanPurpose: "",
 };
 
-function reducer(state = initialState, action){
+const initialStateCustomer = {
+    fullName: '',
+    nationID: '',
+    createdAt: '',
+
+};
+
+function accountReducer(state = initialStateAccount, action){
     switch(action.type){
         case "account/deposit":
             return {...state, balance: state.balance + action.payload};
@@ -28,7 +35,28 @@ function reducer(state = initialState, action){
     }
 }
 
-const store = createStore(reducer);
+function customerReducer(state = initialStateCustomer, action){
+    switch(action.type){
+        case 'customer/createCustomer':
+        return {...state,
+             fullName: action.payload.fullName,
+              nationID: action.payload.nationID,
+               createdAt: action.payload.createdAt,
+            };
+            case 'customer/updateName':
+                return {...state, fullName: action.payload};
+
+                default:
+                    return state;
+    }
+}
+
+const rootReducer = combineReducers({
+    account: accountReducer,
+    customer: customerReducer,
+})
+
+const store = createStore(rootReducer);
 
 // store.dispatch({ type: "account/deposit", payload: 500});
 // console.log(store.getState());
@@ -36,12 +64,12 @@ const store = createStore(reducer);
 // store.dispatch({ type: "account/requestLoan", payload: { amount: 2000, purpose: "Buy a house"}});
 // console.log(store.getState());
 
-//Action creators
+//Action creators for Account
 //older way
-export const ACCOUNT_DEPOSIT = "account/deposit";
-function deposit(amount){
-    return { type: ACCOUNT_DEPOSIT, payload: amount};
-}
+// export const ACCOUNT_DEPOSIT = "account/deposit";
+// function deposit(amount){
+//     return { type: ACCOUNT_DEPOSIT, payload: amount};
+// }
 
 //modern way
 function deposit(amount){
@@ -65,3 +93,16 @@ store.dispatch(withdraw(2000))
 store.dispatch(requestLoan(1000, "To buy a house"))
 store.dispatch(payLoan())
 console.log(store.getState());
+
+
+//Action creators for customer
+function createCustomer(fullName, nationID){
+    return {
+         type: "customer/createCustomer",
+          payload: { fullName, nationID, createdAt: new Date().toISOString() }
+        };
+}
+
+function updateName(fullName){
+    return { type: "account/updatedName", payload: fullName}
+}
