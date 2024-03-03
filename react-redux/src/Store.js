@@ -1,3 +1,4 @@
+import { combineReducers, createStore } from 'redux';
 
 const initialStateAccount = {
     balance: 0,
@@ -49,3 +50,15 @@ function customerReducer(state = initialStateCustomer, action){
                     return state;
     }
 }
+
+
+const rootReducer = combineReducers({
+    account: accountReducer,
+    customer: customerReducer,
+})
+
+const store = createStore(rootReducer);
+
+store.dispatch({ type: "account/deposit", payload: 500});
+store.dispatch({ type: "account/requestLoan", payload: { amount: 2000, purpose: "Buy a house"}});
+console.log(store.getState());
