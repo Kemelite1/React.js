@@ -59,6 +59,46 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer);
 
-store.dispatch({ type: "account/deposit", payload: 500});
-store.dispatch({ type: "account/requestLoan", payload: { amount: 2000, purpose: "Buy a house"}});
+// store.dispatch({ type: "account/deposit", payload: 500});
+// store.dispatch({ type: "account/requestLoan", payload: { amount: 2000, purpose: "Buy a house"}});
+// console.log(store.getState());
+
+// Action creators for account
+function deposit(amount){
+    return { type: "account/deposit", payload: amount}
+}
+
+function withdraw(amount){
+    return { type: "account/withdraw", payload: amount}
+}
+
+function requestLoan(amount, purpose){
+    return { type: "account/requestLoan", payload: { amount, purpose}}
+}
+
+function payLoan(){
+    return { type: "account/payLoan"}
+}
+
+store.dispatch(deposit(5000))
+store.dispatch(withdraw(2000))
+store.dispatch(requestLoan(1000, "To buy a house"))
+store.dispatch(payLoan())
+console.log(store.getState());
+
+
+//Action creators for customer
+function createCustomer(fullName, nationID){
+    return {
+         type: "customer/createCustomer",
+          payload: { fullName, nationID, createdAt: new Date().toISOString() }
+        };
+}
+
+function updateName(fullName){
+    return { type: "account/updatedName", payload: fullName}
+}
+
+//dispatching actions for the customer
+store.dispatch(createCustomer('Bovi Kay', '2254678'));
 console.log(store.getState());
