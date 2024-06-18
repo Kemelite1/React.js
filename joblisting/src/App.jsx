@@ -1,6 +1,6 @@
 import Hero from "./components/Hero"
 import HomeCard from "./components/HomeCard"
-import JobOpening from "./components/JobOpening"
+import JobOpenings from "./components/JobOpenings"
 import Navbar from "./components/Navbar"
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
       <Navbar />
       <Hero/>
       <HomeCard />
-      <JobOpening />
+      <JobOpenings />
     </div>
   )
 }
