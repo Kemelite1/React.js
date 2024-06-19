@@ -23,7 +23,7 @@ const JobOpening = ( { job } ) => {
 
                         <div className="mb-5">{description}</div>
 
-                        <button className='mb-5 text-gray-500 hover:text-gray-700'>{showFullDescription ? 'Less' : 'More'}</button>
+                        <button onClick={() => setShowFullDescription( (prevState) => !prevState)} className='mb-5 text-gray-500 hover:text-gray-700'>{showFullDescription ? 'Less' : 'More'}</button>
 
                         <h3 className="mb-2 text-gray-600">{job.salary} /Year</h3>
                         <div className="border border-gray-100 mb-5"></div>
