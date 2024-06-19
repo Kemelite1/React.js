@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
-
+import { FaMapMarker } from 'react-icons/fa';
 
 const JobOpening = ( { job } ) => {
 
@@ -30,7 +30,7 @@ const JobOpening = ( { job } ) => {
 
                         <div className="mb-4 flex flex-col lg:flex-row justify-between">
                             <div className="mb-3 text-green-500">
-                                <i className="fa-solid fa-location-dot text-lg"></i>
+                                <FaMapMarker className='inline mb-1 text-lg'/>
                                 {job.location}</div>
                             <a href={`/job/${job.id}`} className="py-2 px-4 bg-black hover:bg-gray-700 text-white text-sm rounded-lg h-[36px] text-center">Read More</a>
                         </div>
