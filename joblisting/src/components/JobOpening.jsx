@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 import { FaMapMarker } from 'react-icons/fa';
+import {  Link } from 'react-router-dom';
 
 const JobOpening = ( { job } ) => {
 
@@ -32,7 +33,7 @@ const JobOpening = ( { job } ) => {
                             <div className="mb-3 text-green-500">
                                 <FaMapMarker className='inline mb-1 mr-1 text-lg'/>
                                 {job.location}</div>
-                            <a href={`/job/${job.id}`} className="py-2 px-4 bg-black hover:bg-gray-700 text-white text-sm rounded-lg h-[36px] text-center">Read More</a>
+                            <Link to={`/job/${job.id}`} className="py-2 px-4 bg-black hover:bg-gray-700 text-white text-sm rounded-lg h-[36px] text-center">Read More</Link>
                         </div>
 
                     </div>
