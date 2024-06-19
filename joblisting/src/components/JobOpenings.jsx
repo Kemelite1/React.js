@@ -1,3 +1,4 @@
+
 import jobs from '../jobs.json'
 import JobOpening from './JobOpening';
 
@@ -20,5 +21,6 @@ const JobOpenings = () => {
     </section>
   )
 }
+
 
 export default JobOpenings
