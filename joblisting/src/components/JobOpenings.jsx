@@ -1,10 +1,27 @@
 import { PropTypes } from 'prop-types';
-
-import jobs from '../jobs.json'
+import { useState, useEffect } from 'react';
 import JobOpening from './JobOpening';
 
+
 const JobOpenings = ( {isHomePage = false }) => {
-    const jobslist = isHomePage ? jobs.slice(0, 3) : jobs;
+    const [jobsList, setJobsList] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() =>  {
+        const fetchJobs = async () => {
+            try{
+                const response = await fetch('http://localhost:5000/jobs');
+                const data = await response.json();
+                setJobsList(data);
+            }catch(error) {
+                console.log('Error fetching jobs', error);
+            }finally {
+                setLoading(false);
+            }
+
+        }
+        fetchJobs();
+    }, [])
     
   return (
     <section className="bg-green-200 py-10 px-4">
@@ -12,9 +29,15 @@ const JobOpenings = ( {isHomePage = false }) => {
             <h2 className="text-stone-500 text-3xl font-bold text-center mb-6">{ isHomePage ? 'Recent Jobs' : 'All Jobs'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                {jobslist.map( (job) => (
+                {loading ? ( 
+                    <h2>Loading...</h2>
+                ) : (
+                    <>
+                {jobsList.map( (job) => (
                     <JobOpening key={job.id} job={job}/>
                 ) )}
+                    </>
+                )}
 
             </div>
         </div>
