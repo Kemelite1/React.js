@@ -1,6 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { useState, useEffect } from 'react';
 import JobOpening from './JobOpening';
+import Spinner from './Spinner';
 
 
 const JobOpenings = ( {isHomePage = false }) => {
@@ -27,20 +28,18 @@ const JobOpenings = ( {isHomePage = false }) => {
     <section className="bg-green-200 py-10 px-4">
         <div className="m-auto lg:container container-xl">
             <h2 className="text-stone-500 text-3xl font-bold text-center mb-6">{ isHomePage ? 'Recent Jobs' : 'All Jobs'}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 {loading ? ( 
-                    <h2>Loading...</h2>
+                    <Spinner loading={loading} />
                 ) : (
-                    <>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {jobsList.map( (job) => (
                     <JobOpening key={job.id} job={job}/>
                 ) )}
-                    </>
+                    </div>
                 )}
 
             </div>
-        </div>
     </section>
   )
 }
