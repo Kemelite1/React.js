@@ -1,7 +1,12 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.jpg'
 
 const Navbar = () => {
+
+    const activeLink = ({ isActive}) => isActive ? 'py-2 px-3 bg-black text-white rounded-md hover:bg-gray-900 hover:text-white'
+    : ' py-2 px-3 text-white rounded-md hover:bg-gray-900 hover:text-white';
+
+
   return (
     <nav className="bg-green-400 border-b border-gray-300">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -9,22 +14,20 @@ const Navbar = () => {
                 <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
 
                     {/* logo */}
-                    <Link className='mr-4 flex flex-shrink-0 items-center' to="/">
+                    <NavLink className='mr-4 flex flex-shrink-0 items-center' to="/">
                         <img className='h-10 w-auto' src={Logo} alt="logo" />
                         <span className=' hidden md:block ml-2 text-white font-bold text-2xl'>Rovicha-HR</span>
-                    </Link>
+                    </NavLink>
 
                     <div className="md:ml-auto">
                         <div className='flex space-x-2'>
-                            <Link to="/" className='py-2 px-3 bg-black text-white rounded-md
-                             hover:bg-gray-900 hover:text-white'>Home
-                             </Link>
+                            <NavLink to="/" className={ activeLink }>Home
+                             </NavLink>
 
-                             <Link to="/jobs" className='py-2 px-3 text-white rounded-md hover:bg-gray-900
-                              hover:text-white'>Jobs
-                              </Link>
+                             <NavLink to="/jobs" className={activeLink}>Jobs
+                              </NavLink>
 
-                              <Link to="/add-job" className='py-2 px-3 text-white rounded-md hover:bg-gray-900 hover:text-white'>Add Job</Link>
+                              <NavLink to="/add-job" className={activeLink}>Add Job</NavLink>
 
                         </div>
                     </div>
