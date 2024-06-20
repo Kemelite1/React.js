@@ -1,8 +1,11 @@
+import JobOpenings from "../components/JobOpenings"
 
 
 const JobsPage = () => {
   return (
-    <div>JobsPage</div>
+    <section className="py-6 px-4">
+      <JobOpenings />
+    </section>
   )
 }
 
