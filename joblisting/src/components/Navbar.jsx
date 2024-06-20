@@ -24,7 +24,7 @@ const Navbar = () => {
                               hover:text-white'>Jobs
                               </Link>
 
-                              <a to="/add-job" className='py-2 px-3 text-white rounded-md hover:bg-gray-900 hover:text-white'>Add Job</a>
+                              <Link to="/add-job" className='py-2 px-3 text-white rounded-md hover:bg-gray-900 hover:text-white'>Add Job</Link>
 
                         </div>
                     </div>
