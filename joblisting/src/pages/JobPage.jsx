@@ -40,7 +40,6 @@ const JobPage = () => {
                   <p className='mb-4'>{job.salary} / Year</p>
                 </div>
 
-
               </main>
 
               {/* sidebar */}

@@ -125,6 +125,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "305d",
+      "title": "Product Manager",
+      "type": "Full-Time",
+      "description": "Join our team as a product manager and build within a dynamic environment. The ideal candidate is someone with experience in product management and also has collaboration skill as well as programming skills.",
+      "location": "Port Harcourt. Nigeria.",
+      "salary": "$60K - $80K",
+      "company": {
+        "name": "Bovi Technologies",
+        "description": "A tech company with innovative and growth mindset.",
+        "contactEmail": "techhub@bovi.com",
+        "contactPhone": "+23480897654"
+      }
     }
   ]
 }
