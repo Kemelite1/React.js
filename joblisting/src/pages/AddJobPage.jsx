@@ -12,13 +12,35 @@ const AddJobPage = () => {
     const [contactPhone, setContactPhone] = useState('');
 
 
+    const submitForm = (e) => {
+        e.preventDefault();
+        
+        const newJob = {
+            title,
+            type,
+            description,
+            location,
+            salary,
+            company: {
+                name: companyName,
+                description: companyDescription,
+                contactEmail,
+                contactPhone
+
+            },
+            
+        };
+        console.log(newJob)
+
+    };
+
 
 
   return (
     <section className="bg-green-50">
         <div className="container m-auto max-w-2xl py-24">
             <div className="bg-white py-8 px-6 m-4 mb-4 rounded-md shadow-md border md:m-0">
-                <form>
+                <form onSubmit={submitForm}>
                     <h2 className="mb-6 text-3xl font-semibold text-center">Add Job</h2>
                     <div className="mb-4">
                         <label htmlFor="type" className="block mb-2 font-bold text-gray-700">Job Type</label>
