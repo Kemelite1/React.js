@@ -10,7 +10,7 @@ import AddJobPage from "./pages/AddJobPage";
 
 
 const App = () => {
-
+// making post request to backend
   const addJob = async  (newJob) => {
     const response = await fetch('/api/jobs', {
       method: 'POST',
