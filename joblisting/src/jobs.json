@@ -125,6 +125,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "b636",
+      "title": "Project Manager",
+      "type": "Full-Time",
+      "description": "The Project Manager is responsible for planning, executing, and successfully completing projects within the allotted timeline and budget. This role demands strong leadership qualities, excellent communication skills, and the ability to manage complex projects across various departments.",
+      "location": "Abuja, Nigeria",
+      "salary": "$160K - $180K",
+      "company": {
+        "name": "Bovi Technologies",
+        "description": "We are a tech company.\nWhat We Offer:\n- Competitive salary and benefits package.\n- Opportunities for professional growth and advancement.\n- Dynamic and innovative work environment.",
+        "contactEmail": "techhub@bovi.com",
+        "contactPhone": "+23480897654"
+      }
     }
   ]
 }
