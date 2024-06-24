@@ -1,9 +1,20 @@
 import { FaArrowLeft, FaLocationDot } from 'react-icons/fa6';
-import { useParams, useLoaderData, Link } from 'react-router-dom'
+import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom'
 
-const JobPage = () => {
+const JobPage = ( { deleteJob }) => {
   const { id } = useParams();
   const job = useLoaderData();
+  const navigate = useNavigate();
+
+  const onDeleteClick = (jobId) => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this job?');
+    if (!confirmDelete) 
+      return;
+
+      // delete the job
+      deleteJob(jobId);
+      navigate('/jobs');
+    };
 
   return (  
         <>
@@ -58,7 +69,7 @@ const JobPage = () => {
                 <div className='bg-white p-6 mt-6 rounded-lg shadow-md'>
                   <h3 className='text-xl font-bold mb-6'>Manage Job</h3>
                   <Link to={`/jobs/edit/${job.id}`} className='block text-center py-2 px-4 mt-4 w-full bg-gray-500 hover:bg-gray-700 text-white font-bold rounded-full focus:outline-none focus:shadow-outline'>Edit Job</Link>
-                  <button className='block py-2 px-4 text-center mt-4 bg-red-500 hover:bg-red-600 w-full text-white font-bold rounded-full focus:outline-none focus:shadow-outline'>Delete</button>
+                  <button onClick={ () => onDeleteClick(job.id)} className='block py-2 px-4 text-center mt-4 bg-red-500 hover:bg-red-600 w-full text-white font-bold rounded-full focus:outline-none focus:shadow-outline'>Delete</button>
 
                 </div>
 
