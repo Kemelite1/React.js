@@ -6,7 +6,7 @@
       "type": "Full-Time",
       "description": "We are seeking a talented Front-End Developer to join our team in Johannesburg, SA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as React or Angular.",
       "location": "Johannesburg, SA",
-      "salary": "$70K - $80K",
+      "salary": "$120K - $140K",
       "company": {
         "name": "ALX Africa",
         "description": "ALX Africa is a leading technology company specializing in web development and digital solutions. We pride ourselves on delivering high-quality products and services to our clients while fostering a collaborative and innovative work environment.",
@@ -16,11 +16,11 @@
     },
     {
       "id": "2",
-      "title": "Front-End Engineer (React & Redux)",
-      "type": "Full-Time",
-      "location": "Lagos, NG",
+      "title": "Front-End Engineer",
+      "type": "Remote",
       "description": "Join our team as a Front-End Developer in Lekki, Phase 1, Nigeria. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
-      "salary": "$70K - $80K",
+      "location": "Lagos, NG",
+      "salary": "$60K - $80K",
       "company": {
         "name": "Teencoders Techhub",
         "description": "Teencoders Techhub is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
